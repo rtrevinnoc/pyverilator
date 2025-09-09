@@ -429,7 +429,7 @@ class PyVerilator:
         if which_verilator is None:
             raise Exception("'verilator' executable not found")
         verilog_defines = ["+define+" + x for x in verilog_defines]
-        cflags = '-fPIC -shared --std=c++11 -DVL_USER_FINISH ' + cargs
+        cflags = '-fPIC -shared --std=c++14 -DVL_USER_FINISH ' + cargs
         
         if dump_en:
             cflags += ' -DDUMP_LEVEL=%d' % dump_level
